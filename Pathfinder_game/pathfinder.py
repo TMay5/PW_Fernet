@@ -76,11 +76,11 @@ def find_neighbors(maze, row, col):
 
     if row > 0: #moves up
         neighbors.append((row-1, col))
-    if row +1 < len(maze): #down
+    elif row +1 < len(maze): #down
         neighbors.append((row + 1, col))
-    if col > 0: #left
+    elif col > 0: #left
         neighbors.append((row, col - 1))
-    if col + 1 < len(maze[0]): #right
+    elif col + 1 < len(maze[0]): #right
         neighbors.append((row, col + 1))
 
     return neighbors
